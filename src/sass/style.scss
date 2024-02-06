@@ -1,0 +1,134 @@
+@use 'nav';
+@use 'animal';
+@use 'background';
+@use 'home';
+@use 'oneAnimalPage';
+@use 'noPage';
+@use  'hungryAnimals';
+@use 'loading';
+@use 'variables' as v;
+@use 'mixins';
+
+
+
+
+
+#root,
+body {
+
+  margin: 0 ;
+  padding: 0;
+ height: 100vh;
+ min-height: 100%;
+  width: 100%;
+  color: v.$ligth-shadow;
+  background-color: v.$primary-background-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -ms-overflow-style: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur671.cur), auto !important;
+  
+}
+
+
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.all{
+height: 100%;
+min-height: fit-content;
+min-height: -moz-fit-content;
+width: 100%;
+overflow-y: scroll;
+padding:  0;
+
+}
+.all::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+/* Global styling */
+
+h2, p{z-index: 10;}
+
+a {
+  all: unset;
+}
+
+.link {
+  font-weight: 600;
+  color: v.$ligth-shadow;
+  text-decoration: inherit;
+}
+
+.link:focus {
+  font-weight: 600;
+ 
+border-bottom: 2px solid v.$border-nav;
+}
+
+article {
+  /* width 100% minus paddingen(--padding-container) som finns samt minus 4px för border */
+  width: calc(100% - (v.$padding-article-width * 2) - 4px);
+  height: calc(100% - (v.$padding-article-width * 2) - 4px);
+  min-height: calc(90vh - (v.$padding-article-width * 2 ) - 4px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding:0  v.$padding-article-width;
+  margin: 0;
+  z-index: 10;
+}
+
+
+
+
+
+.manyObjectsContainer {
+  width: 100%;
+  display: grid;
+  gap: 3rem;
+
+  z-index: 10;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ 
+padding:  v.$padding-element-heigth 0;
+  @include mixins.devices(tablet) {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
+  }
+
+}
+
+
+
+
+
+
+
+
+/* standard container flex */
+.standardContainer {
+  height:calc(100% - (v.$padding-element-heigth * 2 ));
+  width: calc(100% - (v.$padding-element-width * 2));
+  max-width: 700px;
+
+  display: flex;
+  padding: v.$padding-element-heigth v.$padding-element-width;
+  justify-content: space-between;
+  align-items: start;
+  z-index: 10;
+  border-radius:  v.$border-radius;
+  box-shadow: #00000039 5px 4px 10px, inset 2px 2px 20px rgba(255, 255, 255, 0.281), inset -2px -2px 5px rgba(28, 28, 28, 0.433);
+}

@@ -1,0 +1,29 @@
+@use 'variables' as v;
+
+.oneAnimalContainer {
+    background-image: v.$linear-gradient;
+
+    min-height: 100vh;
+
+}
+
+.oneAnimalSection {
+    z-index: 10;
+    height: calc(100vh - 6rem);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 52rem;
+    padding: 0;
+    overflow: hidden;
+
+
+}
+
+
+.hello {
+    overflow: hidden;
+    padding-top: 2rem;
+
+}

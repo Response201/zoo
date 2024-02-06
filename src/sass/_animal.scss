@@ -1,0 +1,186 @@
+@use 'variables' as v;
+@use 'mixins';
+
+.animalArticle{
+height: fit-content;
+min-height: 100%;
+    background-image:v.$linear-gradient;
+}
+
+.animalContainer {
+    flex-direction: column;
+    height: fit-content;
+
+background-color: v.$primary-background-color;
+color: black;
+z-index: 10;
+    p {
+        padding: 0 0 1rem 0;
+        margin: 0;
+        font-size: clamp(0.7rem, 2vw, 1rem);
+    }
+
+    &___nameAndImg {
+        width: 100%;
+
+        p,
+        h2 {
+            padding: 0 0 .2rem 0;
+            margin: 0;
+
+        }
+
+
+        h2 {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            height: 3rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        &__latinName {
+            font-size: clamp(0.7rem, 2vw, 1rem);
+            font-style: italic;
+            font-weight: 400;
+
+
+
+        }
+
+        &___imgContainer {
+            overflow: hidden;
+            min-height: 10rem;
+            max-height: 300px;
+            width: 100%;
+            aspect-ratio: 9/6;
+            display: flex;
+            justify-content: center;
+            border-radius: v.$border-radius;
+            margin: 0 0 1rem 0;
+            border-top: v.$border-image;
+            border-bottom: v.$border-image;
+
+            img {
+                width: 100%;
+
+                object-fit: cover;
+                object-position: center;
+                filter: opacity(85%);
+
+            }
+
+        }
+    }
+
+
+&___medecinAndBirthFoodContainer{
+    height: 3rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+justify-content: space-between;
+
+}
+
+    &___FoodStatusContainer {
+        display: flex;
+       
+        
+        align-items: center;
+
+
+
+        &___heart {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+    
+            width:clamp(2rem, 3vw, 2.7rem);
+            height: 100%;
+        }
+
+
+
+    }
+
+
+    &___btnContainer,
+    &___btnContainer--one {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        button {
+            height: 30px;
+            width: clamp(1rem, 40%, 5rem);
+z-index: 10;
+
+        
+
+
+       
+
+
+
+
+           &:hover {
+
+
+                cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur671.cur), pointer !important;
+
+            }
+
+        }
+
+
+        .feedBtn {
+
+
+
+
+            &:hover {
+ 
+ 
+                 cursor: url(https://cur.cursors-4u.net/food/foo-4/foo348.cur), pointer !important;
+ 
+             }
+ 
+         }
+
+
+
+
+
+
+        &___hollow {
+
+            filter: opacity(50%);
+
+
+
+
+        }
+
+
+
+
+        &___hide {
+            display: none;
+
+        }
+
+    }
+
+    &___btnContainer--one {
+
+        justify-content: end;
+
+    }
+
+
+}

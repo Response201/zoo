@@ -1,0 +1,17 @@
+@use 'variables' as v;
+
+
+.hungryAnimalsContainer{
+
+
+    background-color: v.$primary-background-color;
+width:calc(100% - ( v.$padding-article-width * 2));
+padding:  v.$padding-article-width;
+    &___text--NoHunger{
+height: 100%;
+text-align: center;
+
+    }
+
+}
+
