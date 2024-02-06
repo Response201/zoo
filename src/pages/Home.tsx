@@ -1,6 +1,6 @@
 import  { useState } from 'react'
 import image from '../assets/images/header.jpg'
-import ShowHungryanimals from '../component/ShowHungryanimals'
+import {ShowHungryanimals} from '../component/ShowHungryanimals'
 import { Background } from '../component/Background'
 import { GetAnimalData } from '../component/GetAnimalData'
 import { AnimalModel } from '../models/AnimalModel'

@@ -60,4 +60,4 @@ const hungryAnimal:AnimalModel[] =  animalList.filter((animalItem:AnimalModel) =
 </section>
   </section>)}
 }
-export default ShowHungryanimals
+
