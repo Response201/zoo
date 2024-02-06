@@ -1,10 +1,11 @@
 import  { useState } from 'react'
 import image from '../assets/images/header.jpg'
-import {ShowHungryanimals} from '../component/ShowHungryanimals'
+
 import { Background } from '../component/Background'
 import { GetAnimalData } from '../component/GetAnimalData'
 import { AnimalModel } from '../models/AnimalModel'
 import { Loading } from '../component/Loading'
+import { ShowHungryanimals } from '../component/ShowHungryanimals'
 const Home =  () => {
 const [loading, setLoading] = useState<boolean>(false)
 const [animalList, setAnimalList] =  useState<AnimalModel[]>(JSON.parse(localStorage.getItem("animals")  || '[]'))
