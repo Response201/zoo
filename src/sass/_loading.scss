@@ -2,19 +2,18 @@
 
 .loadingContainer{
 
-height: 100%;
+height: calc(100% + v.$padding-element-heigth * 2 + 4px);
 width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-
+background-color: v.$primary-background-color;
 
 
 }
 .animation{
-
-    border: v.$border-image;
-height: 300px;
+border: v.$border-image;
+height: clamp(200px, 40vh, 300px);
 border-radius: 50%;
 
 }

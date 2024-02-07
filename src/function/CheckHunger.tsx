@@ -8,8 +8,9 @@ export const CheckHunger = () =>  {
           const duration = moment.duration(newDate.diff(animal.lastFed));
           const hours:number = duration.hours();
           const day:number = duration.days();
+          const year:number = duration.years();
     
-          if( hours >= 4 || day >= 1){
+          if( hours >= 4 || day >= 1 || year >= 1){
             return { ...animal, isFed: false, feedStatut: 'urgent' }}
 
 
