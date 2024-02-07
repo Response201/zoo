@@ -1,5 +1,5 @@
 import  {  useState } from 'react'
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom'
 import placeholder from '../assets/images/placeholder.jpg'
 import { AnimalModel } from '../models/AnimalModel';
 import { OnClickFeedAnimal } from '../function/OnClickFeedAnimal';
