@@ -221,7 +221,7 @@
         p {
             margin: 0;
             padding: 1px 2px;
-            font-size: 0.7rem;
+            font-size: clamp(0.62rem, 1vw, 0.7rem);
             background: v.$linear-gradient-center;
 
         }
