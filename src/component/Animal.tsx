@@ -56,9 +56,13 @@ const onClickFeedAnimal = (id:number) => {
       <section className='animalContainer___medecinAndBirthFoodContainer'> 
      { medicine?  <p>Mediciner: {medicine}</p> : ''}  {yearOfBirth? <p>Född: {yearOfBirth}</p> :''}     <section className='animalContainer___FoodStatusContainer'> <p>Senast matad: {lastFed}</p> <Heart feel={feedStatut}  /></section> 
      </section>
+     <section className='animalContainer___feedStatusContainer'>  <p>{feedStatut === 'urgent' ? 'Djuret behöver mat' : ''}</p> </section>
 <section className={showButton ?'animalContainer___btnContainer':'animalContainer___btnContainer--one'}> 
+
 <button className={showButton ? 'normalBtn': 'animalContainer___btnContainer___hide'}> <Link to={`/animal/${idAnimal}`} > Läs mer </Link></button> 
 <button className={isFed ? 'animalContainer___btnContainer___hollow': 'feedBtn'} onClick={(e) => isFed ? '' : onClickFeedAnimal(idAnimal) }>Mata</button>  </section>
+
+
 </section>
   )
 }
